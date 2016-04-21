@@ -1,0 +1,14 @@
+
+<div>
+  <%= form_for(@cource) do |f| %>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  <div>
+    <%= f.label :description %>
+  </div>
+  <div>
+    <%= f.text_area :description, size:"30x20" %>
+  </div>
+    <%= f.submit 'コース作成' %>
+  <% end %>
+</div>

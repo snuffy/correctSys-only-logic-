@@ -1,0 +1,3 @@
+
+    <tr><th><%= user.id %></th><td><%= user.name %></td>
+    <td><%= link_to 'ログイン',login_path(:id => user.id,:dist => false), method: :post %></td></tr>

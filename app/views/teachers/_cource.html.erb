@@ -1,0 +1,9 @@
+  <tr><td><%= cource.name %></td>
+    <td>
+    <% if current_user.cources.where(id: cource.id).presence %>
+    担当中
+    <% else %>
+        <%= link_to '担当講座にする',teach_cource_path(:id => cource.id)%>
+    <% end %>
+    </td>
+  </tr>

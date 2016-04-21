@@ -1,0 +1,15 @@
+<div>
+  <h3>ユーザー一覧</h3>
+  <table border=1>
+    <tr><th>ID</th><th>名前</th></tr>
+    <%= render partial: 'user', collection: @users %>
+  </table>
+</div>
+
+<div>
+  <h3>先生一覧</h3>
+  <table border=1>
+    <tr><th>ID</th><th>名前</th></tr>
+    <%= render partial: 'teacher', collection: @teachers %>
+  </table>
+</div>
