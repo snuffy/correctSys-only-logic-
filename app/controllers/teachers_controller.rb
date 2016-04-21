@@ -20,6 +20,9 @@ class TeachersController < ApplicationController
     end
   end
 
+  def index
+    @cources = current_user.cources
+  end
 
   def attendance
     @teacher = current_user

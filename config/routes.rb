@@ -21,6 +21,7 @@ Rails.application.routes.draw do
   get 'addmin_top' => 'teachers#show'
 
   get 'teach_cource' => 'teachers#attendance'
+  get 'teach_cource_index' => 'teachers#index'
 
   resources :users
   resources :teachers

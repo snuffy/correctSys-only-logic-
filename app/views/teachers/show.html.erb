@@ -1,9 +1,9 @@
 <h1>管理ツール</h1>
 
-<table>
+<table border=1>
   <%= render partial: 'cource', collection: @cources %>
 </table>
 
-<h2><%= link_to '・講座一覧','#' %></h2>
+<h2><%= link_to '・講座一覧',teach_cource_index_path %></h2>
 <h2><%= link_to '・課題登録・編集','#' %></h2>
 <h2><%= link_to '・課題添削','#' %></h2>
