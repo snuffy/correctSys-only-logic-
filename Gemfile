@@ -36,6 +36,8 @@ group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
   gem 'pry'
+  gem 'rails-erd', github: 'ready4god2513/rails-erd', branch: 'rails-4.2-support-fix'
+  gem 'annotate'
 end
 
 group :development do

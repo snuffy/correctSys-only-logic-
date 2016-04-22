@@ -1,0 +1,16 @@
+  <h2>登録先講座 ⇨ <strong><%= @cource.name %></strong></h2>
+
+  <h2>登録情報</h2>
+  <%= form_for(@task) do |f| %>
+  <%= f.label '課題名' %>
+  <%= f.text_field :name %>
+
+  <div>
+    <%= f.label '課題内容（テキスト）' %>
+  </div>
+  <div>
+    <%= f.text_area :content, size:'20x10' %>
+  </div>
+  <%= f.hidden_field :cource_id, :value => current_user.cources.find(params[:cource_id]).id %>
+  <%= f.submit '登録する' %>
+  <% end %>
