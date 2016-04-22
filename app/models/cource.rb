@@ -6,4 +6,6 @@ class Cource < ActiveRecord::Base
 
   has_many :cource_teachers, class_name: 'cource_teacher', foreign_key: :cource_id
   has_many :teachers, :through =>  :cource_teachers
+
+  has_many :tasks
 end

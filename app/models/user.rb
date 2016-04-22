@@ -3,4 +3,6 @@ class User < ActiveRecord::Base
 
   has_many :cource_users, class_name: 'CourceUser', foreign_key: :user_id
   has_many :cources, :through => :cource_users
+
+  has_many :tasks
 end

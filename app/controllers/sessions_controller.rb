@@ -7,7 +7,7 @@ class SessionsController < ApplicationController
     if params[:dist] == 'true'
       teacher = Teacher.find(params[:id])
       login(teacher,true)
-      redirect_to controller: 'teachers',action: :show
+      redirect_to teacher
     elsif params[:dist] == 'false'
       user = User.find(params[:id])
       login(user,false)
