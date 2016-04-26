@@ -1,0 +1,1 @@
+  <tr><td><%= myCource.name %></td><td><%= @mytasks.where(cource_id: myCource.id).count %></td><td><%= link_to '課題を登録する',teacher_system_cource_add_task_path(cource_id: myCource.id) %></td></tr>

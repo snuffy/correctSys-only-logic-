@@ -3,7 +3,7 @@
     <% if current_user.cources.where(id: cource.id).presence %>
     <strong>担当中</strong>
     <% else %>
-        <%= link_to '担当講座にする',teach_cource_path(:id => cource.id)%>
+        <%= link_to '担当講座にする',teacher_system_teach_cource_path(:id => cource.id)%>
     <% end %>
     </td>
   </tr>

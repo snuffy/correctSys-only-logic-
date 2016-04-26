@@ -1,0 +1,10 @@
+ <h2>担当講座一覧</h2>
+
+  <table border=1>
+  <tr><th>担当講座</th><th>登録課題数</th><th></th></tr></tr>
+    <%= render partial:'teacher_system/tasks/myCource', collection: @mycource%>
+  </table>
+
+  <div>
+    <%= link_to '課題一覧', '' %>
+  </div>

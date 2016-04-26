@@ -1,0 +1,11 @@
+
+<h2>先生の登録</h2>
+
+<%= form_for([:teacher_system,@teacher]) do |f| %>
+
+<%= f.label :name %>
+<%= f.text_field :name %>
+
+<%= f.submit '追加する'%>
+
+<% end %>

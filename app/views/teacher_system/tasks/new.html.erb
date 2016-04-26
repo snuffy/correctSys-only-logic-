@@ -1,7 +1,7 @@
   <h2>登録先講座 ⇨ <strong><%= @cource.name %></strong></h2>
 
   <h2>登録情報</h2>
-  <%= form_for(@task) do |f| %>
+  <%= form_for([:teacher_system ,:cource, @task]) do |f| %>
   <%= f.label '課題名' %>
   <%= f.text_field :name %>
 

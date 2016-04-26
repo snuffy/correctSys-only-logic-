@@ -1,5 +1,7 @@
 module CourcesHelper
+
+  include SessionsHelper
   def attend_cource?(cource)
-   current_user.cources.where(id:params[:id]).presence
+    current_user.cources.find(cource.id).presence
   end
 end

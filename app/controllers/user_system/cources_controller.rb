@@ -1,4 +1,4 @@
-class CourcesController < ApplicationController
+class UserSystem::CourcesController < ApplicationController
   def new
     @cource = Cource.new
   end
@@ -6,7 +6,6 @@ class CourcesController < ApplicationController
   def show
     @cource = Cource.find(params[:id])
     @tasks = @cource.tasks
-    @user = current_user
   end
 
   def create

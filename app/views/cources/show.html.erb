@@ -1,15 +1,16 @@
   <h1><%= @cource.name %></h1>
-  <% if attend_cource?(@cource) %>
+  <% if @user.cources.find(3) %>
 
   <h2>レッスン内容</h2>
   ほげほげほげほげほげ
   <hr>
   <h2>先生からの課題</h2>
-
   <div>
-    課題の提出
-    <button>提出する！</button>
+  <ul>
+    <%= render partial:'tasks' , collection: @tasks%>
+  </ul>
   </div>
+ 
   <% else %>
      <div>
       <h2>講座内容</h2>
@@ -17,7 +18,7 @@
     </div>
     <div>
       <% if current_user %>
-          <%= link_to 'この講座を受講する',attend_cource_path(cource_id: @cource.id) %>
+          <%= link_to 'この講座を受講する',user_system_attend_cource_path(cource_id: @cource.id) %>
       <% end %>
     </div>
   <% end %>

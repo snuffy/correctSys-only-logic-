@@ -1,7 +1,6 @@
+<h2>生徒の登録</h2>
 
-<h2>先生の登録</h2>
-
-<%= form_for(@teacher) do |f| %>
+<%= form_for([:user_system, @user]) do |f| %>
 
 <%= f.label :name %>
 <%= f.text_field :name %>

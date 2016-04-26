@@ -1,4 +1,4 @@
-class UsersController < ApplicationController
+class UserSystem::UsersController < ApplicationController
   def new
     @user = User.new
     @teacher = Teacher.new
@@ -22,7 +22,7 @@ class UsersController < ApplicationController
   def show
     @user = current_user
     @cources = Cource.all
-    if current_user.cources
+    if @user.cources
       @my_cources = current_user.cources
     end
   end
@@ -30,7 +30,7 @@ class UsersController < ApplicationController
   def attendance
     @user = current_user
     @user.cources << Cource.find(params[:cource_id])
-    redirect_to current_user
+    redirect_to [:user_system, @user]
   end
 
 

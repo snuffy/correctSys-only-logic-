@@ -1,4 +1,4 @@
-class TeachersController < ApplicationController
+class TeacherSystem::TeachersController < ApplicationController
   def new
     @teacher = Teacher.new
   end
@@ -27,7 +27,7 @@ class TeachersController < ApplicationController
   def attendance
     @teacher = current_user
     @teacher.cources << Cource.find(params[:id])
-    redirect_to current_user
+    redirect_to [:teacher_system, @teacher]
   end
 
 
