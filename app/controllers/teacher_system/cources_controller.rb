@@ -17,6 +17,7 @@ class TeacherSystem::CourcesController < ApplicationController
     @cources = Cource.all
   end
 
+
   private
   def cource_params
     params.require(:cource).permit(:name,:description)

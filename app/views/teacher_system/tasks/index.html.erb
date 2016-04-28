@@ -1,4 +1,5 @@
 <h2>課題一覧</h2>
-<ul>
+<table border=1>
+  <tr><th>講座名</th><th>課題名</th><th>状態</th><th>公開日</th></tr>
   <%= render partial: 'disp_task', collection: @mytasks %>
-</ul>
+<table>

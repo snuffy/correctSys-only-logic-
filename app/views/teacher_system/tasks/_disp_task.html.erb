@@ -1,1 +1,6 @@
-  <li><%= disp_task.name %></li>
+  <tr>
+    <td><%=link_to disp_task.cource.name, teacher_system_task_path(:id => disp_task.id) %></td>
+    <td><%= disp_task.name %></td>
+    <td>公開中</td>
+    <td><%= disp_task.created_at.strftime('%Y年%m月%d日')%></td>
+  </tr>

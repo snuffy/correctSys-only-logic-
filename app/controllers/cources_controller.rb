@@ -14,6 +14,10 @@ class CourcesController < ApplicationController
     redirect_to root_url if @cource.save
   end
 
+  def index_attend_users
+    @this_cource = Cource.find(params[:cource_id  ])
+    @attend_users = @this_cource.users
+  end
   def index
     @cources = Cource.all
   end

@@ -1,1 +1,5 @@
-  <tr><td><%= teach_cource.name %></td><td></td><td></td></tr>
+  <tr>
+    <td><%= teach_cource.name %></td>
+    <td><%= teach_cource.tasks.count %></td>
+    <td><%=teach_cource.created_at.strftime('%Y年%m月%d日') %></td>
+  </tr>

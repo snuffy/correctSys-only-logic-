@@ -19,15 +19,13 @@ class TasksController < ApplicationController
     @task = current_user.tasks
   end
 
-  def index_cource
-    @mycource = current_user.cources
-    @mytasks = current_user.tasks
-  end
+
 
   def index
     @mytasks = current_user.tasks
   end
 
+  
 
   def edit
   end
